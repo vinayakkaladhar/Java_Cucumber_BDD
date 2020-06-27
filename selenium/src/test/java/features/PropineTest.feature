@@ -81,6 +81,7 @@ Feature: Date Conversion with various formats supported
       |2020-Mar-17|
       |2020-17-March|
       |2020-17-Mar  |
+      |2020-17-Marc  |
       |2020/March/17  |
       |2020/Mar/17|
       |2020/17/March|
@@ -129,26 +130,29 @@ Feature: Date Conversion with various formats supported
       |20/3/17|
       |20/17/03|
       |20/17/3  |
+      |Sun 2020/3/17  |
+      |31-Feb-20|
+      |29-Feb-2021|
 
   Scenario Outline:To test the Propine Date Conversion Functionality with differnt year format
     Given Am using the website https://vast-dawn-73245.herokuapp.com/
     When I enter <date> on the input field and click 'Submit'
-    Then I should see a date 'Mon Mar 20 2017 00:00:00 GMT+0000' on the form
+    Then I should see a date 'Mon Mar 20 2017 02:12:59 GMT+0000' on the form
 
     Examples:
       |date|
-      |20 march 17  |
-      |20 mar 17|
-      |20 17 march|
-      |20 17 mar  |
-      |20-march-17  |
-      |20-mar-17|
-      |20-17-march|
-      |20-17-mar  |
-      |20/march/17  |
-      |20/mar/17|
-      |20/17/march|
-      |20/17/mar  |
+      |20 march 17 02:12:59 |
+      |20 mar 17 02:12:59|
+      |20 17 march 02:12:59|
+      |20 17 mar 02:12:59 |
+      |20-march-17 02:12:59  |
+      |20-mar-17 02:12:59|
+      |20-17-march 02:12:59|
+      |20-17-mar 02:12:59 |
+      |20/march/17 02:12:59 |
+      |20/mar/17 02:12:59|
+      |20/17/march 02:12:59|
+      |20/17/mar  02:12:59|
 
 
 
